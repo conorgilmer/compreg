@@ -1,5 +1,6 @@
 CREATE TABLE IF NOT EXISTS `players` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(60) NOT NULL,
   `firstname` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
   `surname` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
   `gender` char(1) not null,
