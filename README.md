@@ -7,4 +7,8 @@ PHP Form writing to mysql db
 
 number, email, first name, surname, icu_code, icu_rating, fide_rating, blitz_rating
 
+send email confirmation to registrant
 export mysql db to csv
+list by highest rating first
+add closing date cut off - send email to controller just in case extra space
+
