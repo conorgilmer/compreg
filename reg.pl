@@ -85,7 +85,7 @@ print "<tr><td>Surname:</td><td><input type=text size=30 name=f_sname></td></tr>
 print "<tr><td>ICU Code:</td><td><input type=text size=30 name=f_icucode></td></tr>";
 print "<tr><td>Rating:</td><td><input type=text size=30 name=f_rating></td></tr>";
 #print "<tr><td>Text:</td><td> <textarea type=text rows=3 cols=30 name=f_text></textarea></td></tr>";
-print "<tr><td></td><td><input type=submit border=0 value=\"WRITE\"></td></tr>";
+print "<tr><td></td><td><input type=submit border=0 value=\"Register\"></td></tr>";
 print "</table>";
 print "</form>";
 

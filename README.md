@@ -4,7 +4,7 @@ export db so as it can be used
 
 Very old perl-cgi log in form
 
-PHP Form writing to mysql db
+PHP Form writing to mysql db, validate by php and javascript
 
 number, email, first name, surname, gender, dob, icu_code, icu_rating, fide_rating, blitz_rating
 
