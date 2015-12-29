@@ -31,12 +31,20 @@ function isEmail($email)
 	{
 		$error_msg = 'Please confirm your email <br>';
 	} 
+	else if(trim($icu_code) == '')
+	{
+		$error_msg = 'Please confirm your icu code <br>';
+	} 
 
 	if($error_msg == '')
 	{ 
 		$_SESSION['fname'] = $fname;
 		$_SESSION['sname'] = $sname;
 		$_SESSION['email'] = $email;		
+		$_SESSION['icu_code'] = $icu_code;		
+		$_SESSION['icu_rating'] = $icu_rating;		
+		$_SESSION['fide_rating'] = $fide_rating;		
+		$_SESSION['blitz_rating'] = $blitz_rating;		
 
 
 
