@@ -17,4 +17,33 @@ function isEmail($email)
  $fname = $_POST['fname'];
  $sname = $_POST['sname'];
 
+
+
+	if(trim($fname) == '')
+	{
+		$error_msg = 'Please confirm your firstname <br>';
+	} 
+	else if(trim($sname) == '')
+	{
+		$error_msg = 'Please confirm your surname  <br>';
+	} 
+	else if(trim($email) == '')
+	{
+		$error_msg = 'Please confirm your email <br>';
+	} 
+
+	if($error_msg == '')
+	{ 
+		$_SESSION['fname'] = $fname;
+		$_SESSION['sname'] = $sname;
+		$_SESSION['email'] = $email;		
+
+
+
+		header("Location: process_reg.php");
+		exit;
+		
+	} else {
+		header("Location: reg.php?errmsg=$error_msg");
+
 ?>
