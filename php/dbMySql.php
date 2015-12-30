@@ -11,7 +11,7 @@ class DB_con
  
  public function insert($email, $fname,$sname,$gender,$icu_code,$icu_rating,$fide_rating,$blitz_rating,$fed)
  {
-  $res = mysql_query("INSERT markers(id, email, firstname, surname, gender, icu_code, icu_rating, fide_rating, blitz_rating, federation, tstamp) VALUES('','$email','$fname','$sname','$gender', '$icu_code', '$icu_rating', '$fide_rating' ,'$blitz_rating', '$fed', now())");
+  $res = mysql_query("INSERT players(id, email, firstname, surname, gender, icu_code, icu_rating, fide_rating, blitz_rating, federation, tstamp) VALUES('','$email','$fname','$sname','$gender', '$icu_code', '$icu_rating', '$fide_rating' ,'$blitz_rating', '$fed', now())");
   return $res;
  }
  
