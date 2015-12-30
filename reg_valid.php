@@ -13,9 +13,11 @@ function isEmail($email)
  $icu_rating = $_POST['icu_rating'];
  $fide_rating = $_POST['fide_rating'];
  $blitz_rating = $_POST['blitz_rating'];
- $email = $_POST['email'];
- $fname = $_POST['fname'];
- $sname = $_POST['sname'];
+ $email  = $_POST['email'];
+ $fname  = $_POST['fname'];
+ $sname  = $_POST['sname'];
+ $gender = $_POST['gender'];
+ $dob    = $_POST['dob'];
 
 
 
@@ -49,17 +51,19 @@ function isEmail($email)
 		$_SESSION['fname'] = $fname;
 		$_SESSION['sname'] = $sname;
 		$_SESSION['email'] = $email;		
+		$_SESSION['dob'] = $dob;		
+		$_SESSION['gender'] = $gender;		
 		$_SESSION['icu_code'] = $icu_code;		
 		$_SESSION['icu_rating'] = $icu_rating;		
 		$_SESSION['fide_rating'] = $fide_rating;		
 		$_SESSION['blitz_rating'] = $blitz_rating;		
 
 
-
+		// go to process page
 		header("Location: process_reg.php");
 		exit;
 		
-	} else {
+	} else {//return to input page with error message
 		header("Location: reg.php?errmsg=$error_msg");
 
 ?>
