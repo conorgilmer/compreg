@@ -35,6 +35,14 @@ function isEmail($email)
 	{
 		$error_msg = 'Please confirm your icu code <br>';
 	} 
+	else if(trim($icu_rating) < 700 )
+	{
+		$error_msg = 'Please enter a real rating <br>';
+	} 
+	else if(trim($icu_rating) > 3000 )
+	{
+		$error_msg = 'Please enter a real rating <br>';
+	} 
 
 	if($error_msg == '')
 	{ 
