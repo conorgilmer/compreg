@@ -12,4 +12,4 @@ send email confirmation to registrant
 export mysql db to csv
 list by highest rating first
 add closing date cut off - send email to controller just in case extra space
-
+add competiton junior intermediate senior open
