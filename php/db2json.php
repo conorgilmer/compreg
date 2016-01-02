@@ -3,7 +3,7 @@
     include('config.php');
 
 
-    echo "export $dbtable to json\n";
+    echo "\nexport $dbtable to json\n\n";
     // uses mysqli
    
 
@@ -15,7 +15,7 @@
     $result = mysqli_query($connection, $sql) or die("Error in Selecting " . mysqli_error($connection));
 
     //create an array
-    $emparray = array();
+    $jsonarray = array();
     while($row =mysqli_fetch_assoc($result))
     {
         $jsonarray[] = $row;
@@ -28,7 +28,7 @@
     mysqli_close($connection);
 
     //write to json file
-    echo "\nwrite to file\n";
+    echo "\n\nwrite to file\n";
     $fp = fopen($dbtable.'_data.json', 'w');
     fwrite($fp, json_encode($jsonarray));
     fclose($fp);
