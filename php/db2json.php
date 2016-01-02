@@ -20,6 +20,9 @@ echo "export $dbtable to json\n";
     {
         $emparray[] = $row;
     }
+
+// write json to output stream 
+// to do -  write to file
     echo json_encode($emparray);
 
     //close the db connection
