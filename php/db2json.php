@@ -18,13 +18,19 @@ echo "export $dbtable to json\n";
     $emparray = array();
     while($row =mysqli_fetch_assoc($result))
     {
-        $emparray[] = $row;
+        $jsonarray[] = $row;
     }
 
 // write json to output stream 
 // to do -  write to file
-    echo json_encode($emparray);
+    echo json_encode($jsonarray);
 
     //close the db connection
     mysqli_close($connection);
+
+    //write to json file
+    $fp = fopen($dbtable.'_data.json', 'w');
+    fwrite($fp, json_encode($jsonarray));
+    fclose($fp);
+
 ?>
