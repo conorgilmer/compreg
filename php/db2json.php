@@ -1,9 +1,9 @@
 <?php
    
-include('config.php');
+    include('config.php');
 
 
-echo "export $dbtable to json\n";
+    echo "export $dbtable to json\n";
     // uses mysqli
    
 
@@ -21,14 +21,14 @@ echo "export $dbtable to json\n";
         $jsonarray[] = $row;
     }
 
-// write json to output stream 
-// to do -  write to file
+    // write json to output stream 
     echo json_encode($jsonarray);
 
     //close the db connection
     mysqli_close($connection);
 
     //write to json file
+    echo "\nwrite to file\n";
     $fp = fopen($dbtable.'_data.json', 'w');
     fwrite($fp, json_encode($jsonarray));
     fclose($fp);
