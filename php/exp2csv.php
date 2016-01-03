@@ -1,6 +1,8 @@
 <?php
     // import in config data
     include('config.php');
+    date_default_timezone_set('Europe/Dublin');
+
 
     //Connection to database
     mysql_connect($dbhost,$dbuser,$dbpwd);
