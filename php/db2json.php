@@ -29,7 +29,10 @@
 
     //write to json file
     echo "\n\nwrite to file\n";
-    $fp = fopen($dbtable.'_data.json', 'w');
+    // could timestamp the filename
+    $filename = $dbtable."_".date('Y-m-d').".json";
+//    $filename = $dbtable."_data.json";
+    $fp = fopen($filename, 'w');
     fwrite($fp, json_encode($jsonarray));
     fclose($fp);
 
